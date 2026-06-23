@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "caveman"
+version = "0.1.0"
+description = "Deterministic LLM prompt/context compression ('talk like a caveman') that cuts tokens while protecting facts — pure-stdlib, optional tiktoken."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amarel Taylor Scott" }]
+keywords = ["llm", "prompt-compression", "tokens", "context", "cost", "preprocessing"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+tiktoken = ["tiktoken>=0.5"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.urls]
+Repository = "https://github.com/Amarel-Taylor-Scott/caveman"
+
+[project.scripts]
+caveman = "caveman.cli:main"
+
+[tool.setuptools]
+packages = ["caveman"]
