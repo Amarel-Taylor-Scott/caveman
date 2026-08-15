@@ -1,0 +1,69 @@
+{
+  "actions": [
+    "text.compress-stopwords"
+  ],
+  "aliases": [
+    "text compress stopwords"
+  ],
+  "discovery_version": "0.1",
+  "documents": [
+    {
+      "extensions": {},
+      "id": "document.amarel.caveman.compress-text",
+      "language": "und",
+      "source_digest": "sha256:695ea831594998750658527591bc29351596798f6ce381caefc0fe1db8ebdae9",
+      "targets": [
+        "node",
+        "inputs",
+        "outputs"
+      ],
+      "text": "Compress prompt text by dropping filler words at an explicit aggressiveness level while protecting negations, code spans, and technical tokens. Generated from the published repository https://github.com/Amarel-Taylor-Scott/caveman by nodepacker."
+    }
+  ],
+  "domains": [
+    "amarel.portfolio"
+  ],
+  "extensions": {
+    "amarel.maturity": "published",
+    "amarel.source-repo": "https://github.com/Amarel-Taylor-Scott/caveman"
+  },
+  "node_id": "amarel.caveman.compress-text",
+  "node_spec_digest": "sha256:695ea831594998750658527591bc29351596798f6ce381caefc0fe1db8ebdae9",
+  "node_version": "1.0.0",
+  "ports": [
+    {
+      "concepts": [],
+      "description": "Prompt text to compress.",
+      "direction": "input",
+      "examples": [],
+      "port_name": "text"
+    },
+    {
+      "concepts": [],
+      "description": "Compressed text.",
+      "direction": "output",
+      "examples": [],
+      "port_name": "text"
+    },
+    {
+      "concepts": [],
+      "description": "Token counts and savings for the compression.",
+      "direction": "output",
+      "examples": [],
+      "port_name": "report"
+    }
+  ],
+  "purposes": [
+    "Compress prompt text by dropping filler words at an explicit aggressiveness level while protecting negations, code spans, and technical tokens."
+  ],
+  "solutions": [
+    "Reuse this published portfolio primitive inside a typed solution graph."
+  ],
+  "summary": "Compress prompt text by dropping filler words at an explicit aggressiveness level while protecting negations, code spans, and technical tokens.",
+  "tags": [
+    "license.mit",
+    "runtime.python",
+    "dependency-free"
+  ],
+  "title": "Compress Text"
+}

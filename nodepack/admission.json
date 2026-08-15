@@ -1,0 +1,77 @@
+{
+  "admission_model_version": "0.1",
+  "all_admitted": true,
+  "candidate_total": 4,
+  "decision_total": 8,
+  "harness": {
+    "id": "harness.nodepacker",
+    "version": "0.1.0"
+  },
+  "node_count": 2,
+  "nodes": [
+    {
+      "admitted": true,
+      "admitted_candidates": [
+        "candidate.amarel.caveman.compress-text.level-1-16a5197c426c",
+        "candidate.amarel.caveman.compress-text.level-2-7f10c6cbcbae",
+        "candidate.amarel.caveman.compress-text.level-3-c8d699b727ef"
+      ],
+      "admitted_space_digest": "sha256:c795c67686d3ed08a6cce7968499085e8c8dc6eb0e46c41e41760cc3c8c02a2e",
+      "decisions_examined": 4,
+      "foreign_rejection_count": 1,
+      "foreign_rejection_reasons": [
+        "missing capabilities: text.compress-stopwords",
+        "missing output port report",
+        "missing output port text"
+      ],
+      "node_id": "amarel.caveman.compress-text",
+      "node_spec_digest": "sha256:695ea831594998750658527591bc29351596798f6ce381caefc0fe1db8ebdae9",
+      "node_version": "1.0.0",
+      "own_candidates": [
+        "candidate.amarel.caveman.compress-text.level-1-16a5197c426c",
+        "candidate.amarel.caveman.compress-text.level-2-7f10c6cbcbae",
+        "candidate.amarel.caveman.compress-text.level-3-c8d699b727ef"
+      ],
+      "own_rejections": [],
+      "slot_capabilities": [
+        "text.compress-stopwords"
+      ],
+      "template_digest": "sha256:9260f85601efdb851ee03241ffc80e5f955f061fab670c4145f51c4523e90398",
+      "template_id": "template.amarel.caveman.compress-text"
+    },
+    {
+      "admitted": true,
+      "admitted_candidates": [
+        "candidate.amarel.caveman.estimate-tokens.default"
+      ],
+      "admitted_space_digest": "sha256:ca7beecfb4e39275b56b26ffb6b60492fd9455ca5e8965d93109ce2aefd9cc9d",
+      "decisions_examined": 4,
+      "foreign_rejection_count": 3,
+      "foreign_rejection_reasons": [
+        "missing capabilities: text.estimate-tokens",
+        "missing output port count"
+      ],
+      "node_id": "amarel.caveman.estimate-tokens",
+      "node_spec_digest": "sha256:5abbb98ff0584e4e95dddc189209cfe41823ad2a56d317f5d3feff3ab7e9a241",
+      "node_version": "1.0.0",
+      "own_candidates": [
+        "candidate.amarel.caveman.estimate-tokens.default"
+      ],
+      "own_rejections": [],
+      "slot_capabilities": [
+        "text.estimate-tokens"
+      ],
+      "template_digest": "sha256:7a09d11f7e44fad5402eb3f4cbedb3d0ef3cfab3306f3f983ec649c08b256718",
+      "template_id": "template.amarel.caveman.estimate-tokens"
+    }
+  ],
+  "pack_id": "amarel.caveman-node-pack",
+  "pack_version": "0.1.0",
+  "query_digest": "sha256:ed8c417ac889318b6143b1cfcfd1c0ea68e53e46b9f999e9a3a64d8c7682400a",
+  "receipt_digest": "sha256:e1b1b1b229d376b3fd3cfe68ea2f70d85630dc2090ee28cc711e2a3506b3ac96",
+  "registry_digest": "sha256:e71dc981198ced97605c57542fcc1271a95a92dd75d05646efd6402120b0d0ca",
+  "registry_id": "registry.amarel.caveman",
+  "session_digest": "sha256:1741e4259361faab7c272fe2a5ee868dddfa69da357a549c07c0394ebae3fd3e",
+  "session_warnings": [],
+  "snapshot_digest": "sha256:010b8162e8a95c70e42be7e1b9b1397d6adf92d6dc884163c4b82e0f3a6e3ea3"
+}

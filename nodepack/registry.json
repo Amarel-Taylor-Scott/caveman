@@ -1,0 +1,178 @@
+{
+  "candidates": [
+    {
+      "deployment": "",
+      "id": "candidate.amarel.caveman.compress-text.level-1-16a5197c426c",
+      "implementation_digest": "sha256:6faba9f97801745b36c9132d579a8ea226010aa50b281f080473d111346588eb",
+      "node_id": "amarel.caveman.compress-text",
+      "node_version": "1.0.0",
+      "parameters": {
+        "level": 1
+      }
+    },
+    {
+      "deployment": "",
+      "id": "candidate.amarel.caveman.compress-text.level-2-7f10c6cbcbae",
+      "implementation_digest": "sha256:6faba9f97801745b36c9132d579a8ea226010aa50b281f080473d111346588eb",
+      "node_id": "amarel.caveman.compress-text",
+      "node_version": "1.0.0",
+      "parameters": {
+        "level": 2
+      }
+    },
+    {
+      "deployment": "",
+      "id": "candidate.amarel.caveman.compress-text.level-3-c8d699b727ef",
+      "implementation_digest": "sha256:6faba9f97801745b36c9132d579a8ea226010aa50b281f080473d111346588eb",
+      "node_id": "amarel.caveman.compress-text",
+      "node_version": "1.0.0",
+      "parameters": {
+        "level": 3
+      }
+    },
+    {
+      "deployment": "",
+      "id": "candidate.amarel.caveman.estimate-tokens.default",
+      "implementation_digest": "sha256:e1e5cf430cb824f50a1f2c176e93bc90ce3f695261f3ff98fbfee96e095c05c9",
+      "node_id": "amarel.caveman.estimate-tokens",
+      "node_version": "1.0.0",
+      "parameters": {}
+    }
+  ],
+  "id": "registry.amarel.caveman",
+  "model_version": "0.2",
+  "nodes": [
+    {
+      "capabilities": [
+        "text.compress-stopwords"
+      ],
+      "description": "Compress prompt text by dropping filler words at an explicit aggressiveness level while protecting negations, code spans, and technical tokens.",
+      "determinism": "deterministic",
+      "effects": [],
+      "entrypoint": "caveman.ung_nodes:compress_text",
+      "failure_modes": [],
+      "id": "amarel.caveman.compress-text",
+      "idempotency": "idempotent",
+      "implementation_digest": "sha256:6faba9f97801745b36c9132d579a8ea226010aa50b281f080473d111346588eb",
+      "inputs": [
+        {
+          "cardinality": "one",
+          "description": "Prompt text to compress.",
+          "name": "text",
+          "type": {
+            "id": "amarel.text",
+            "media_type": "application/json",
+            "schema_digest": "",
+            "units": "",
+            "version": "1"
+          }
+        }
+      ],
+      "invariants": [],
+      "model_version": "0.2",
+      "outputs": [
+        {
+          "cardinality": "one",
+          "description": "Compressed text.",
+          "name": "text",
+          "type": {
+            "id": "amarel.text",
+            "media_type": "application/json",
+            "schema_digest": "",
+            "units": "",
+            "version": "1"
+          }
+        },
+        {
+          "cardinality": "one",
+          "description": "Token counts and savings for the compression.",
+          "name": "report",
+          "type": {
+            "id": "amarel.report",
+            "media_type": "application/json",
+            "schema_digest": "",
+            "units": "",
+            "version": "1"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "choices": [
+            1,
+            2,
+            3
+          ],
+          "default": 2,
+          "description": "Aggressiveness: 1 filler only, 2 + articles, 3 + auxiliaries.",
+          "name": "level",
+          "required": false,
+          "value_type": "integer"
+        }
+      ],
+      "permissions": [],
+      "postconditions": [
+        "negation words, code spans, and technical tokens are never dropped"
+      ],
+      "preconditions": [],
+      "resources": [],
+      "runtime": "python",
+      "source": "caveman/ung_nodes.py",
+      "verifier": "",
+      "version": "1.0.0"
+    },
+    {
+      "capabilities": [
+        "text.estimate-tokens"
+      ],
+      "description": "Estimate the LLM token count of text without any tokenizer dependency.",
+      "determinism": "deterministic",
+      "effects": [],
+      "entrypoint": "caveman.ung_nodes:estimate_token_count",
+      "failure_modes": [],
+      "id": "amarel.caveman.estimate-tokens",
+      "idempotency": "idempotent",
+      "implementation_digest": "sha256:e1e5cf430cb824f50a1f2c176e93bc90ce3f695261f3ff98fbfee96e095c05c9",
+      "inputs": [
+        {
+          "cardinality": "one",
+          "description": "Text to measure.",
+          "name": "text",
+          "type": {
+            "id": "amarel.text",
+            "media_type": "application/json",
+            "schema_digest": "",
+            "units": "",
+            "version": "1"
+          }
+        }
+      ],
+      "invariants": [],
+      "model_version": "0.2",
+      "outputs": [
+        {
+          "cardinality": "one",
+          "description": "Estimated token count (max of words and chars/4).",
+          "name": "count",
+          "type": {
+            "id": "amarel.integer",
+            "media_type": "application/json",
+            "schema_digest": "",
+            "units": "",
+            "version": "1"
+          }
+        }
+      ],
+      "parameters": [],
+      "permissions": [],
+      "postconditions": [],
+      "preconditions": [],
+      "resources": [],
+      "runtime": "python",
+      "source": "caveman/ung_nodes.py",
+      "verifier": "",
+      "version": "1.0.0"
+    }
+  ],
+  "version": "0.1.0"
+}

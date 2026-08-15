@@ -1,0 +1,54 @@
+[
+  {
+    "inputs": {
+      "text": "Could you please just quickly summarize the document for me?"
+    },
+    "parameters": {
+      "level": 2
+    },
+    "expect": {
+      "text": "Could you quickly summarize document for me?",
+      "report": {
+        "level": 2,
+        "original_tokens": 15,
+        "compressed_tokens": 11,
+        "saved_tokens": 4,
+        "percent_saved": 26.7
+      }
+    }
+  },
+  {
+    "inputs": {
+      "text": "Please do not remove the `keep this` code span, thank you."
+    },
+    "parameters": {
+      "level": 3
+    },
+    "expect": {
+      "text": "Please not remove `keep this` code span, you.",
+      "report": {
+        "level": 3,
+        "original_tokens": 15,
+        "compressed_tokens": 12,
+        "saved_tokens": 3,
+        "percent_saved": 20.0
+      }
+    }
+  },
+  {
+    "inputs": {
+      "text": "Basically this is a very simple test."
+    },
+    "parameters": {},
+    "expect": {
+      "text": "Basically this is simple test.",
+      "report": {
+        "level": 2,
+        "original_tokens": 10,
+        "compressed_tokens": 8,
+        "saved_tokens": 2,
+        "percent_saved": 20.0
+      }
+    }
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "actions": [
+    "text.estimate-tokens"
+  ],
+  "aliases": [
+    "text estimate tokens"
+  ],
+  "discovery_version": "0.1",
+  "documents": [
+    {
+      "extensions": {},
+      "id": "document.amarel.caveman.estimate-tokens",
+      "language": "und",
+      "source_digest": "sha256:5abbb98ff0584e4e95dddc189209cfe41823ad2a56d317f5d3feff3ab7e9a241",
+      "targets": [
+        "node",
+        "inputs",
+        "outputs"
+      ],
+      "text": "Estimate the LLM token count of text without any tokenizer dependency. Generated from the published repository https://github.com/Amarel-Taylor-Scott/caveman by nodepacker."
+    }
+  ],
+  "domains": [
+    "amarel.portfolio"
+  ],
+  "extensions": {
+    "amarel.maturity": "published",
+    "amarel.source-repo": "https://github.com/Amarel-Taylor-Scott/caveman"
+  },
+  "node_id": "amarel.caveman.estimate-tokens",
+  "node_spec_digest": "sha256:5abbb98ff0584e4e95dddc189209cfe41823ad2a56d317f5d3feff3ab7e9a241",
+  "node_version": "1.0.0",
+  "ports": [
+    {
+      "concepts": [],
+      "description": "Text to measure.",
+      "direction": "input",
+      "examples": [],
+      "port_name": "text"
+    },
+    {
+      "concepts": [],
+      "description": "Estimated token count (max of words and chars/4).",
+      "direction": "output",
+      "examples": [],
+      "port_name": "count"
+    }
+  ],
+  "purposes": [
+    "Estimate the LLM token count of text without any tokenizer dependency."
+  ],
+  "solutions": [
+    "Reuse this published portfolio primitive inside a typed solution graph."
+  ],
+  "summary": "Estimate the LLM token count of text without any tokenizer dependency.",
+  "tags": [
+    "license.mit",
+    "runtime.python",
+    "dependency-free"
+  ],
+  "title": "Estimate Tokens"
+}

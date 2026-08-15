@@ -1,0 +1,52 @@
+{
+  "capabilities": [
+    "text.estimate-tokens"
+  ],
+  "description": "Estimate the LLM token count of text without any tokenizer dependency.",
+  "determinism": "deterministic",
+  "effects": [],
+  "entrypoint": "caveman.ung_nodes:estimate_token_count",
+  "failure_modes": [],
+  "id": "amarel.caveman.estimate-tokens",
+  "idempotency": "idempotent",
+  "implementation_digest": "sha256:e1e5cf430cb824f50a1f2c176e93bc90ce3f695261f3ff98fbfee96e095c05c9",
+  "inputs": [
+    {
+      "cardinality": "one",
+      "description": "Text to measure.",
+      "name": "text",
+      "type": {
+        "id": "amarel.text",
+        "media_type": "application/json",
+        "schema_digest": "",
+        "units": "",
+        "version": "1"
+      }
+    }
+  ],
+  "invariants": [],
+  "model_version": "0.2",
+  "outputs": [
+    {
+      "cardinality": "one",
+      "description": "Estimated token count (max of words and chars/4).",
+      "name": "count",
+      "type": {
+        "id": "amarel.integer",
+        "media_type": "application/json",
+        "schema_digest": "",
+        "units": "",
+        "version": "1"
+      }
+    }
+  ],
+  "parameters": [],
+  "permissions": [],
+  "postconditions": [],
+  "preconditions": [],
+  "resources": [],
+  "runtime": "python",
+  "source": "caveman/ung_nodes.py",
+  "verifier": "",
+  "version": "1.0.0"
+}

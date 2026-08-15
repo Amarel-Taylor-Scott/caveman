@@ -1,0 +1,44 @@
+{
+  "artifacts": [
+    {
+      "annotations": {
+        "org.opencontainers.image.title": "caveman.ung_nodes:compress_text"
+      },
+      "digest": "sha256:6faba9f97801745b36c9132d579a8ea226010aa50b281f080473d111346588eb",
+      "media_type": "text/x-python",
+      "name": "artifact.amarel.caveman.compress-text",
+      "uri": "python://caveman.ung_nodes:compress_text"
+    },
+    {
+      "annotations": {
+        "org.opencontainers.image.title": "caveman.ung_nodes:estimate_token_count"
+      },
+      "digest": "sha256:e1e5cf430cb824f50a1f2c176e93bc90ce3f695261f3ff98fbfee96e095c05c9",
+      "media_type": "text/x-python",
+      "name": "artifact.amarel.caveman.estimate-tokens",
+      "uri": "python://caveman.ung_nodes:estimate_token_count"
+    }
+  ],
+  "dependencies": [],
+  "description": "UNG node pack generated from the caveman repository's ung_nodes adapter registry (2 nodes, 4 explicit candidates).",
+  "descriptor_digests": [
+    "sha256:a5e52f533f55fe4e6a1bb772ee0471371af61dc0cb7a5da79c1627ba7b2266fc",
+    "sha256:7a0477353fdc286cd07647b3c2dd6056b3abab32fe49abba9aa1507865508dec"
+  ],
+  "discovery_version": "0.1",
+  "embedding_record_digests": [],
+  "extensions": {
+    "amarel.adapter-spec": "ADAPTER_SPEC.md",
+    "amarel.generator": "nodepacker",
+    "amarel.maturity": "published",
+    "amarel.source-repo": "https://github.com/Amarel-Taylor-Scott/caveman"
+  },
+  "id": "amarel.caveman-node-pack",
+  "license": "MIT",
+  "node_spec_digests": [
+    "sha256:695ea831594998750658527591bc29351596798f6ce381caefc0fe1db8ebdae9",
+    "sha256:5abbb98ff0584e4e95dddc189209cfe41823ad2a56d317f5d3feff3ab7e9a241"
+  ],
+  "source": "https://github.com/Amarel-Taylor-Scott/caveman",
+  "version": "0.1.0"
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "inputs": {
+      "text": "one two three"
+    },
+    "parameters": {},
+    "expect": 4
+  },
+  {
+    "inputs": {
+      "text": ""
+    },
+    "parameters": {},
+    "expect": 0
+  },
+  {
+    "inputs": {
+      "text": "supercalifragilisticexpialidocious"
+    },
+    "parameters": {},
+    "expect": 9
+  }
+]
